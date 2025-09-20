@@ -23,7 +23,10 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['https://school-management-client-zvhw.vercel.app', 'http://localhost:4200'],
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // Routes
